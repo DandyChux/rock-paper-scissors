@@ -3,35 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name='author' content='Chukwuma Okoroji'>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel='stylesheet' href='../styles/style.css'>
 
-  Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>ock, Paper, Scissors</title>
 </head>
+
 <body>
+  <header class='scoreboard'>
+    <img class='scoreboard__logo' src='../images/logo.svg' alt='Rock, Paper, Scissors'>
+    <div class='scoreboard__box'>
+      <p class='scoreboard__box--label'>Score</p>
+      <p class='scoreboard__box--score'>0</p>
+    </div>
+  </header>
 
+  <main class='site-main'>
+    <article class='game-wrapper'>
+      <button class='btn-paper' aria-label='Paper'></button>
+      <button class='btn-rock' aria-label='Rock'></button>
+      <button class='btn-scissors' aria-label='Scissors'></button>
+    </article>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <article class='result-wrapper'>
+      <button class='player-selection' aria-label='You picked'></button>
+      <p class='result-label result-label--player'>You Picked</p>
+      <div class='result-box'>
+        <p class='game-result'></p>
+        <button class='btn-play-again' aria-label='Play Again'>Play Again</button>
+      </div>
+      <div class='loading-dot'></div>
+      <button class='house-selection' aria-label='House picked'></button>
+      <p class='result-label result-label--house'>House Picked</p>
+    </article>
+  </main>
+
+  <footer class='site-footer'>
+    <button class='btn-reset' aria-label='Reset'>Reset</button>
+    <button class='btn-rules' aria-label='Rules'>Rules</button>
+    <div class='rules-model'>
+      <div class='rules-model__content'>
+        <img class='rules-model__content--close' src='../images/icon-close.svg' alt='Games Rules Close'>
+        <img class='rules-model__content--img' src='../images/image-rules.svg' alt='Game Rules'>
+      </div>
+    </div>
+    <p class='attribution'>Challenge by <a class='attribution__link' href='https://www.frontendmentor.io?ref=challenge' target='_blank'>Frontend Mentor</a>. Coded by <a class='attribution__link' href='https://www.github.com/Dandychux' target='_blank'>Chukwma Okoroji</a>.</p>
+  </footer>
+
+  <script src='../scripts/rules.js'></script>
+  <script src='../scripts/game-code.js'></script>
 </body>
 </html>
